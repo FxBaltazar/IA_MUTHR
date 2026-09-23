@@ -1,0 +1,2674 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WEYLAND-YUTANI CORP - MUTHR INTERFACE</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="scanlines"></div>
+
+<div class="noise"></div>
+
+
+<div class="terminal-container">
+
+
+    <!-- =========================================================
+         CABECERA
+    ========================================================== -->
+
+    <header class="top-header">
+
+        <div class="brand">
+
+            <span class="triangle">▲</span>
+
+            <span>WEYLAND-YUTANI CORP</span>
+
+        </div>
+
+
+        <div class="status">
+
+            <span class="status-dot"></span>
+
+            MUTHR ONLINE
+
+        </div>
+
+
+        <div class="header-line"></div>
+
+
+        <h2>
+
+            COVENANT CENTRAL COMPUTER OS
+
+            <span>[ MUTHR v3.6 ]</span>
+
+        </h2>
+
+
+        <div class="header-sub">
+
+            UNITED SYSTEMS MILITARY // SYNTHETIC INTELLIGENCE CORE
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         CONTENIDO PRINCIPAL
+    ========================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =====================================================
+             PANEL IZQUIERDO
+        ====================================================== -->
+
+        <section class="left-panel">
+
+
+            <div class="panel-title">
+
+                <span>01</span>
+
+                MUTHR COMMUNICATION TERMINAL
+
+            </div>
+
+
+
+            <!-- CHAT -->
+
+            <div id="console" class="console-box">
+
+                <p class="system-text">
+
+                    SYSTEM: Inicializando hardware de la Covenant...
+
+                </p>
+
+
+                <p class="system-text">
+
+                    SYSTEM: Módulo de idioma español [OK].
+
+                </p>
+
+
+                <p class="system-text">
+
+                    SYSTEM: Sistema de reconocimiento vocal [READY].
+
+                </p>
+
+
+                <p class="system-green">
+
+                    SYSTEM: MUTHR ONLINE.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MEDIDOR REAL DEL MICRÓFONO
+            ================================================== -->
+
+            <div class="voice-monitor">
+
+
+                <div class="monitor-header">
+
+                    <span>
+
+                        AUDIO INPUT / VOICE FREQUENCY
+
+                    </span>
+
+
+                    <span id="voice-level-text">
+
+                        LEVEL 000
+
+                    </span>
+
+                </div>
+
+
+                <div class="frequency-container">
+
+                    <div id="frequency-bars" class="frequency-bars">
+
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="voice-status">
+
+                    <span id="mic-status">
+
+                        MICROPHONE STANDBY
+
+                    </span>
+
+
+                    <span>
+
+                        INPUT:
+
+                        <b id="input-db">-∞ dB</b>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CONTROLES DE AUDIO
+            ================================================== -->
+
+            <div class="music-controls">
+
+
+                <button id="prev-btn" class="control-btn">
+
+                    ◀
+
+                    <small>ANTERIOR</small>
+
+                </button>
+
+
+                <button id="play-btn" class="control-btn main-control">
+
+                    ▶
+
+                    <small>PLAY</small>
+
+                </button>
+
+
+                <button id="pause-btn" class="control-btn">
+
+                    ❚❚
+
+                    <small>PAUSA</small>
+
+                </button>
+
+
+                <button id="next-btn" class="control-btn">
+
+                    ▶
+
+                    <small>SIGUIENTE</small>
+
+                </button>
+
+
+                <button id="list-btn" class="control-btn list-control">
+
+                    ☰
+
+                    <small>LISTA</small>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PANEL DERECHO / HOLOGRAMA
+        ====================================================== -->
+
+        <section class="right-panel">
+
+
+            <div class="panel-title">
+
+                <span>02</span>
+
+                COVENANT HOLOGRAPHIC CORE
+
+            </div>
+
+
+
+            <div class="hologram-container">
+
+
+                <div class="ring ring-one"></div>
+
+                <div class="ring ring-two"></div>
+
+                <div class="ring ring-three"></div>
+
+                <div class="ring ring-four"></div>
+
+
+                <div class="axis horizontal"></div>
+
+                <div class="axis vertical"></div>
+
+
+                <div class="cross cross-a"></div>
+
+                <div class="cross cross-b"></div>
+
+
+
+                <!-- =================================================
+                     MUTHR HOLOGRAMA EN VIDEO
+                ================================================== -->
+
+                <div id="pulse-core" class="core hologram-video-core">
+
+
+                    <video
+                        id="muthr-hologram"
+                        class="muthr-hologram-video"
+                        src="muthr_hologram.mp4"
+                        autoplay
+                        loop
+                        muted
+                        playsinline
+                        preload="auto">
+                    </video>
+
+
+                </div>
+
+
+
+                <div class="orb orb-one"></div>
+
+                <div class="orb orb-two"></div>
+
+                <div class="orb orb-three"></div>
+
+                <div class="orb orb-four"></div>
+
+
+
+                <div class="holo-data data-top">
+
+                    CORE STATUS // ONLINE
+
+                </div>
+
+
+                <div class="holo-data data-left">
+
+                    CPU 37%
+
+                </div>
+
+
+                <div class="holo-data data-right">
+
+                    AI 99.8%
+
+                </div>
+
+
+                <div class="holo-data data-bottom">
+
+                    SYNTHETIC INTELLIGENCE
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INFORMACIÓN DEL SISTEMA
+            ================================================== -->
+
+            <div class="system-readout">
+
+
+                <div>
+
+                    <span>CORE</span>
+
+                    <b>MU-TH-UR</b>
+
+                </div>
+
+
+                <div>
+
+                    <span>VERSION</span>
+
+                    <b>3.6.7</b>
+
+                </div>
+
+
+                <div>
+
+                    <span>LANGUAGE</span>
+
+                    <b>ES-ES</b>
+
+                </div>
+
+
+                <div>
+
+                    <span>VOICE</span>
+
+                    <b>GOOGLE ES-US</b>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         PANEL DE LISTA DE MÚSICA
+    ========================================================== -->
+
+    <div id="music-panel" class="music-panel">
+
+
+        <div class="music-panel-header">
+
+
+            <span>
+
+                MUTHR AUDIO DATABASE
+
+            </span>
+
+
+            <button id="close-list">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <div id="music-list" class="music-list"></div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         BOTÓN INICIAL
+    ========================================================== -->
+
+    <button id="start-btn" class="start-btn">
+
+
+        <span class="start-icon">◉</span>
+
+
+        <span>
+
+            INITIALIZE MUTHR
+
+            <small>VOICE PROTOCOL</small>
+
+        </span>
+
+    </button>
+
+
+
+    <!-- =========================================================
+         AUDIO
+    ========================================================== -->
+
+    <audio
+        id="audio-player"
+        preload="auto">
+    </audio>
+
+
+
+<script>
+
+
+/* ============================================================
+   ELEMENTOS
+============================================================ */
+
+const consoleBox =
+    document.getElementById("console");
+
+const startBtn =
+    document.getElementById("start-btn");
+
+const pulseCore =
+    document.getElementById("pulse-core");
+
+const audio =
+    document.getElementById("audio-player");
+
+const voiceLevelText =
+    document.getElementById("voice-level-text");
+
+const inputDb =
+    document.getElementById("input-db");
+
+const micStatus =
+    document.getElementById("mic-status");
+
+const frequencyBars =
+    document.querySelectorAll(
+        "#frequency-bars i"
+    );
+
+const musicPanel =
+    document.getElementById("music-panel");
+
+const musicList =
+    document.getElementById("music-list");
+
+
+
+/* ============================================================
+   VARIABLES
+============================================================ */
+
+let fase = 1;
+
+let nombreUsuario = "Usuario";
+
+let vozFemenina = null;
+
+let reconocimientoActivo = false;
+
+let reconocimientoIniciando = false;
+
+let sistemaInicializado = false;
+
+let audioContext = null;
+
+let analyser = null;
+
+let microphoneStream = null;
+
+let animationFrame = null;
+
+let indiceMusica = 0;
+
+let procesandoVoz = false;
+
+let escuchaPendiente = false;
+
+
+
+/* ============================================================
+   LISTA DE MÚSICAS
+============================================================ */
+
+const musicas = [
+
+    {
+        nombre: "Richard Wagner - Entrada de los Dioses al Valhalla",
+        archivo: "music/wagner.mp3"
+    },
+
+    {
+        nombre: "Gustavo Santaolalla",
+        archivo: "music/Gustavo Santaolalla.mp3"
+    },
+
+    {
+        nombre: "Boy Toxic",
+        archivo: "music/BoyToxic.mp3"
+    },
+
+    {
+        nombre: "Mild Club",
+        archivo: "music/MildClub.mp3"
+    },
+
+    {
+        nombre: "My Way",
+        archivo: "music/My Way.mp3"
+    },
+
+    {
+        nombre: "Major Tom",
+        archivo: "music/Major Tom.mp3"
+    },
+
+    {
+        nombre: "Thats Life",
+        archivo: "music/Thats Life.mp3"
+    },
+
+    {
+        nombre: "Gato Payaso",
+        archivo: "music/Gato Payaso.mp3"
+    },
+
+    {
+        nombre: "Nueva alma",
+        archivo: "music/New Soul Yael Naim.mp3"
+    },
+
+    {
+        nombre: "twenty one pilots",
+        archivo: "music/twenty one pilots.mp3"
+    },
+
+    {
+        nombre: "Tonight You Belong to Me",
+        archivo: "music/Tonight You Belong to Me.mp3"
+    }
+
+];
+
+
+
+/* ============================================================
+   TERMINAL
+============================================================ */
+
+function printTerminal(
+    texto,
+    clase = "system-text"
+){
+
+    const p =
+        document.createElement("p");
+
+    p.className = clase;
+
+    p.innerText = texto;
+
+    consoleBox.appendChild(p);
+
+    consoleBox.scrollTop =
+        consoleBox.scrollHeight;
+
+}
+
+
+
+/* ============================================================
+   CARGAR VOZ FEMENINA
+============================================================ */
+
+function cargarVozFemenina(){
+
+    const voices =
+        speechSynthesis.getVoices();
+
+    if(
+        !voices ||
+        voices.length === 0
+    ){
+
+        return false;
+
+    }
+
+
+    vozFemenina =
+        voices.find(
+            voice =>
+                voice.name ===
+                "Google español de Estados Unidos"
+        );
+
+
+    if(!vozFemenina){
+
+        vozFemenina =
+            voices.find(
+                voice =>
+                    voice.name ===
+                    "Google español"
+            );
+
+    }
+
+
+    if(!vozFemenina){
+
+        vozFemenina =
+            voices.find(
+                voice =>
+                    voice.lang
+                        .toLowerCase()
+                        .startsWith("es")
+            );
+
+    }
+
+
+    if(vozFemenina){
+
+        console.log(
+            "MUTHR VOICE:",
+            vozFemenina.name,
+            vozFemenina.lang
+        );
+
+        return true;
+
+    }
+
+    return false;
+
+}
+
+
+speechSynthesis.onvoiceschanged =
+    cargarVozFemenina;
+
+cargarVozFemenina();
+
+
+
+/* ============================================================
+   MUTHR HABLA
+============================================================ */
+
+function madreHabla(texto, despues){
+
+    const estabaReproduciendo =
+        !audio.paused &&
+        !audio.ended;
+
+
+    if(estabaReproduciendo){
+
+        audio.pause();
+
+    }
+
+
+    printTerminal(
+        "MUTHR: " + texto,
+        "madre-text"
+    );
+
+
+    pulseCore.classList.add(
+        "talking"
+    );
+
+
+    speechSynthesis.cancel();
+
+    cargarVozFemenina();
+
+
+    const utterance =
+        new SpeechSynthesisUtterance(
+            texto
+        );
+
+
+    if(vozFemenina){
+
+        utterance.voice =
+            vozFemenina;
+
+        utterance.lang =
+            vozFemenina.lang;
+
+    }else{
+
+        utterance.lang =
+            "es-US";
+
+    }
+
+
+    utterance.rate = 0.94;
+
+    utterance.pitch = 1.08;
+
+    utterance.volume = 1.00;
+
+
+    utterance.onend = () => {
+
+        pulseCore.classList.remove(
+            "talking"
+        );
+
+
+        if(
+            typeof despues ===
+            "function"
+        ){
+
+            despues();
+
+        }else{
+
+            iniciarEscucha();
+
+        }
+
+    };
+
+
+    utterance.onerror = () => {
+
+        pulseCore.classList.remove(
+            "talking"
+        );
+
+
+        if(
+            typeof despues ===
+            "function"
+        ){
+
+            despues();
+
+        }else{
+
+            iniciarEscucha();
+
+        }
+
+    };
+
+
+    setTimeout(
+        () => {
+
+            speechSynthesis.speak(
+                utterance
+            );
+
+        },
+        80
+    );
+
+}
+
+
+
+/* ============================================================
+   RECONOCIMIENTO DE VOZ
+============================================================ */
+
+const SpeechRecognition =
+    window.SpeechRecognition ||
+    window.webkitSpeechRecognition;
+
+
+if(!SpeechRecognition){
+
+    alert(
+        "Chrome o Edge son necesarios para utilizar el reconocimiento de voz."
+    );
+
+}
+
+
+const recognition =
+    SpeechRecognition
+        ? new SpeechRecognition()
+        : null;
+
+
+if(recognition){
+
+    recognition.lang =
+        "es-ES";
+
+    recognition.continuous =
+        false;
+
+    recognition.interimResults =
+        false;
+
+}
+
+
+
+/* ============================================================
+   MEDIDOR REAL DEL MICRÓFONO
+============================================================ */
+
+async function iniciarMedidorVoz(){
+
+    try{
+
+        microphoneStream =
+            await navigator
+                .mediaDevices
+                .getUserMedia({
+                    audio: true
+                });
+
+
+        audioContext =
+            new (
+                window.AudioContext ||
+                window.webkitAudioContext
+            )();
+
+
+        analyser =
+            audioContext
+                .createAnalyser();
+
+
+        analyser.fftSize =
+            256;
+
+
+        const microphone =
+            audioContext
+                .createMediaStreamSource(
+                    microphoneStream
+                );
+
+
+        microphone.connect(
+            analyser
+        );
+
+
+        const data =
+            new Uint8Array(
+                analyser.frequencyBinCount
+            );
+
+
+        function actualizar(){
+
+            if(!analyser){
+
+                return;
+
+            }
+
+
+            analyser.getByteFrequencyData(
+                data
+            );
+
+
+            let suma = 0;
+
+
+            for(
+                let i = 0;
+                i < data.length;
+                i++
+            ){
+
+                suma += data[i];
+
+            }
+
+
+            let promedio =
+                suma /
+                data.length;
+
+
+            let nivel =
+                Math.min(
+                    100,
+                    Math.round(
+                        promedio * 1.7
+                    )
+                );
+
+
+            voiceLevelText.innerText =
+                "LEVEL " +
+                String(nivel)
+                    .padStart(3,"0");
+
+
+            let db =
+                nivel > 0
+                    ? -60 + nivel * 0.6
+                    : -Infinity;
+
+
+            if(
+                db === -Infinity
+            ){
+
+                inputDb.innerText =
+                    "-∞ dB";
+
+            }else{
+
+                inputDb.innerText =
+                    Math.round(db) +
+                    " dB";
+
+            }
+
+
+            frequencyBars.forEach(
+                (bar,index) => {
+
+                    const distancia =
+                        Math.abs(
+                            index -
+                            frequencyBars.length / 2
+                        );
+
+
+                    const variacion =
+                        Math.random() *
+                        35;
+
+
+                    let altura =
+                        nivel -
+                        distancia * 2 +
+                        variacion;
+
+
+                    altura =
+                        Math.max(
+                            4,
+                            Math.min(
+                                100,
+                                altura
+                            )
+                        );
+
+
+                    bar.style.height =
+                        altura + "%";
+
+                }
+            );
+
+
+            animationFrame =
+                requestAnimationFrame(
+                    actualizar
+                );
+
+        }
+
+
+        actualizar();
+
+    }catch(error){
+
+        console.log(
+            "No se pudo acceder al micrófono:",
+            error
+        );
+
+    }
+
+}
+
+
+
+/* ============================================================
+   ESCUCHAR
+============================================================ */
+
+function iniciarEscucha(){
+
+    if(!sistemaInicializado){
+
+        return;
+
+    }
+
+
+    if(!recognition){
+
+        return;
+
+    }
+
+
+    if(
+        speechSynthesis.speaking ||
+        speechSynthesis.pending
+    ){
+
+        escuchaPendiente =
+            true;
+
+        return;
+
+    }
+
+
+    if(
+        reconocimientoActivo ||
+        reconocimientoIniciando ||
+        procesandoVoz
+    ){
+
+        escuchaPendiente =
+            true;
+
+        return;
+
+    }
+
+
+    escuchaPendiente =
+        false;
+
+
+    reconocimientoIniciando =
+        true;
+
+
+    micStatus.innerText =
+        "MICROPHONE LISTENING";
+
+
+    micStatus.classList.add(
+        "active"
+    );
+
+
+    try{
+
+        recognition.start();
+
+    }catch(error){
+
+        console.log(
+            "Recognition start:",
+            error
+        );
+
+
+        reconocimientoIniciando =
+            false;
+
+
+        escuchaPendiente =
+            true;
+
+    }
+
+}
+
+
+
+/* ============================================================
+   RECOGNITION START
+============================================================ */
+
+if(recognition){
+
+    recognition.onstart = () => {
+
+        reconocimientoActivo =
+            true;
+
+        reconocimientoIniciando =
+            false;
+
+        escuchaPendiente =
+            false;
+
+
+        micStatus.innerText =
+            "MICROPHONE LISTENING";
+
+
+        micStatus.classList.add(
+            "active"
+        );
+
+
+        printTerminal(
+            "SYSTEM: Micrófono abierto... Hable ahora.",
+            "system-green"
+        );
+
+    };
+
+
+
+    /* ========================================================
+       RECOGNITION END
+    ======================================================== */
+
+    recognition.onend = () => {
+
+        reconocimientoActivo =
+            false;
+
+        reconocimientoIniciando =
+            false;
+
+
+        micStatus.classList.remove(
+            "active"
+        );
+
+
+        micStatus.innerText =
+            "MICROPHONE STANDBY";
+
+
+        if(
+            escuchaPendiente &&
+            sistemaInicializado
+        ){
+
+            setTimeout(
+                () => {
+
+                    if(
+                        !speechSynthesis.speaking &&
+                        !speechSynthesis.pending
+                    ){
+
+                        iniciarEscucha();
+
+                    }
+
+                },
+                350
+            );
+
+        }
+
+    };
+
+
+
+    /* ========================================================
+       RESULTADO DE VOZ
+    ======================================================== */
+
+    recognition.onresult =
+        (event) => {
+
+            procesandoVoz =
+                true;
+
+
+            micStatus.innerText =
+                "PROCESSING VOICE";
+
+
+            micStatus.classList.remove(
+                "active"
+            );
+
+
+            const textoUsuario =
+                event
+                    .results[0][0]
+                    .transcript
+                    .trim();
+
+
+            printTerminal(
+                "USER: " +
+                textoUsuario,
+                "user-text"
+            );
+
+
+            procesarLogica(
+                textoUsuario
+            );
+
+
+            setTimeout(
+                () => {
+
+                    procesandoVoz =
+                        false;
+
+                },
+                150
+            );
+
+        };
+
+
+
+    /* ========================================================
+       ERROR
+    ======================================================== */
+
+    recognition.onerror =
+        (event) => {
+
+            reconocimientoActivo =
+                false;
+
+            reconocimientoIniciando =
+                false;
+
+            procesandoVoz =
+                false;
+
+
+            micStatus.classList.remove(
+                "active"
+            );
+
+
+            micStatus.innerText =
+                "MICROPHONE STANDBY";
+
+
+            console.log(
+                "Speech recognition error:",
+                event.error
+            );
+
+
+            if(
+                event.error ===
+                "no-speech"
+            ){
+
+                escuchaPendiente =
+                    true;
+
+
+                setTimeout(
+                    () => {
+
+                        iniciarEscucha();
+
+                    },
+                    400
+                );
+
+            }
+
+
+            if(
+                event.error ===
+                    "aborted" ||
+                event.error ===
+                    "network"
+            ){
+
+                escuchaPendiente =
+                    true;
+
+
+                setTimeout(
+                    () => {
+
+                        iniciarEscucha();
+
+                    },
+                    500
+                );
+
+            }
+
+        };
+
+}
+
+
+
+/* ============================================================
+   NORMALIZAR TEXTO
+============================================================ */
+
+function normalizar(texto){
+
+    return texto
+        .normalize("NFD")
+        .replace(
+            /[\u0300-\u036f]/g,
+            ""
+        )
+        .toLowerCase()
+        .trim();
+
+}
+
+
+
+/* ============================================================
+   LIMPIAR NOMBRE
+============================================================ */
+
+function limpiarNombre(nombre){
+
+    if(!nombre){
+
+        return null;
+
+    }
+
+
+    nombre =
+        nombre
+            .replace(
+                /[^a-záéíóúüñ]/gi,
+                ""
+            );
+
+
+    if(!nombre){
+
+        return null;
+
+    }
+
+
+    return (
+        nombre
+            .charAt(0)
+            .toUpperCase() +
+
+        nombre
+            .slice(1)
+            .toLowerCase()
+    );
+
+}
+
+
+
+/* ============================================================
+   EXTRAER NOMBRE
+============================================================ */
+
+function extraerNombre(frase){
+
+    const texto =
+        normalizar(frase);
+
+
+    /*
+       MUTHR acepta:
+
+       "código de acceso David"
+
+       "código de seguridad David"
+
+       También funciona sin tilde:
+       "codigo de acceso David"
+    */
+
+    const marcadores = [
+
+        "codigo de seguridad",
+
+        "codigo de acceso"
+
+    ];
+
+
+    let resto = null;
+
+
+    for(
+        const marcador of marcadores
+    ){
+
+        const posicion =
+            texto.indexOf(
+                marcador
+            );
+
+
+        if(
+            posicion !== -1
+        ){
+
+            resto =
+                texto
+                    .substring(
+                        posicion +
+                        marcador.length
+                    )
+                    .trim();
+
+            break;
+
+        }
+
+    }
+
+
+    if(!resto){
+
+        return null;
+
+    }
+
+
+    const palabras =
+        resto.split(
+            /\s+/
+        );
+
+
+    if(
+        palabras.length > 0 &&
+        palabras[0]
+    ){
+
+        return limpiarNombre(
+            palabras[0]
+        );
+
+    }
+
+
+    return null;
+
+}
+
+
+
+/* ============================================================
+   BUSCAR MÚSICA
+============================================================ */
+
+function buscarMusica(voz){
+
+    const texto =
+        normalizar(voz);
+
+
+    for(
+        let i = 0;
+        i < musicas.length;
+        i++
+    ){
+
+        const nombre =
+            normalizar(
+                musicas[i].nombre
+            );
+
+
+        const palabras =
+            nombre.split(" ");
+
+
+        let coincidencias =
+            palabras.filter(
+                palabra =>
+                    palabra.length > 3 &&
+                    texto.includes(
+                        palabra
+                    )
+            );
+
+
+        if(
+            coincidencias.length >= 2
+        ){
+
+            return i;
+
+        }
+
+    }
+
+
+    if(
+        texto.includes("wagner") ||
+        texto.includes("valhalla") ||
+        texto.includes("rin")
+    ){
+
+        return 0;
+
+    }
+
+
+    if(
+        texto.includes("santaolalla")
+    ){
+
+        return 1;
+
+    }
+
+
+    if(
+        texto.includes("boy toxic")
+    ){
+
+        return 2;
+
+    }
+
+
+    if(
+        texto.includes("mild club")
+    ){
+
+        return 3;
+
+    }
+
+
+    if(
+        texto.includes("my way")
+    ){
+
+        return 4;
+
+    }
+
+
+    if(
+        texto.includes("major tom")
+    ){
+
+        return 5;
+
+    }
+
+
+    if(
+        texto.includes("thats life") ||
+        texto.includes("that's life")
+    ){
+
+        return 6;
+
+    }
+
+
+    if(
+        texto.includes("gato payaso")
+    ){
+
+        return 7;
+
+    }
+
+
+    if(
+        texto.includes("new soul") ||
+        texto.includes("nueva alma")
+    ){
+
+        return 8;
+
+    }
+
+
+    if(
+        texto.includes("twenty one pilots")
+    ){
+
+        return 9;
+
+    }
+
+
+    if(
+        texto.includes("tonight you belong")
+    ){
+
+        return 10;
+
+    }
+
+
+    return -1;
+
+}
+
+
+
+/* ============================================================
+   REPRODUCIR MÚSICA
+============================================================ */
+
+function reproducirMusica(indice){
+
+    if(
+        indice < 0 ||
+        indice >= musicas.length
+    ){
+
+        return;
+
+    }
+
+
+    indiceMusica =
+        indice;
+
+
+    const musica =
+        musicas[indice];
+
+
+    audio.pause();
+
+
+    audio.src =
+        musica.archivo;
+
+
+    audio.load();
+
+
+    audio.play()
+        .then(() => {
+
+            printTerminal(
+                "SYSTEM: AUDIO PLAYING // " +
+                musica.nombre,
+                "system-green"
+            );
+
+        })
+        .catch(error => {
+
+            console.log(
+                "Error reproduciendo audio:",
+                error
+            );
+
+
+            printTerminal(
+                "SYSTEM: No se pudo reproducir el archivo de audio."
+            );
+
+        });
+
+}
+
+
+
+/* ============================================================
+   SIGUIENTE
+============================================================ */
+
+function siguienteMusica(){
+
+    indiceMusica++;
+
+
+    if(
+        indiceMusica >=
+        musicas.length
+    ){
+
+        indiceMusica = 0;
+
+    }
+
+
+    reproducirMusica(
+        indiceMusica
+    );
+
+}
+
+
+
+/* ============================================================
+   ANTERIOR
+============================================================ */
+
+function anteriorMusica(){
+
+    indiceMusica--;
+
+
+    if(
+        indiceMusica < 0
+    ){
+
+        indiceMusica =
+            musicas.length - 1;
+
+    }
+
+
+    reproducirMusica(
+        indiceMusica
+    );
+
+}
+
+
+
+/* ============================================================
+   MOSTRAR LISTA
+============================================================ */
+
+function mostrarLista(){
+
+    musicList.innerHTML =
+        "";
+
+
+    musicas.forEach(
+        (musica,index) => {
+
+            const item =
+                document.createElement(
+                    "button"
+                );
+
+
+            item.className =
+                "music-item";
+
+
+            item.innerHTML = `
+
+                <span class="music-number">
+                    ${String(index + 1).padStart(2,"0")}
+                </span>
+
+                <span class="music-name">
+                    ${musica.nombre}
+                </span>
+
+                <span class="music-arrow">
+                    >
+                </span>
+
+            `;
+
+
+            item.onclick = () => {
+
+                musicPanel.classList.remove(
+                    "visible"
+                );
+
+
+                madreHabla(
+                    `Sí, ${nombreUsuario}. Como desees.`,
+                    () => {
+
+                        printTerminal(
+                            "SYSTEM: Transfiriendo audio a canales internos de la Covenant...",
+                            "system-text"
+                        );
+
+
+                        reproducirMusica(
+                            index
+                        );
+
+
+                        iniciarEscucha();
+
+                    }
+                );
+
+            };
+
+
+            musicList.appendChild(
+                item
+            );
+
+        }
+    );
+
+
+    musicPanel.classList.add(
+        "visible"
+    );
+
+
+    musicList.scrollTop =
+        0;
+
+}
+
+
+
+/* ============================================================
+   BAJAR LISTA
+============================================================ */
+
+function bajarLista(){
+
+    if(
+        !musicPanel.classList.contains(
+            "visible"
+        )
+    ){
+
+        mostrarLista();
+
+    }
+
+
+    musicList.scrollBy({
+
+        top: 180,
+
+        left: 0,
+
+        behavior: "smooth"
+
+    });
+
+
+    printTerminal(
+        "SYSTEM: Desplazando base de datos hacia abajo.",
+        "system-text"
+    );
+
+
+    iniciarEscucha();
+
+}
+
+
+
+/* ============================================================
+   SUBIR LISTA
+============================================================ */
+
+function subirLista(){
+
+    if(
+        !musicPanel.classList.contains(
+            "visible"
+        )
+    ){
+
+        mostrarLista();
+
+    }
+
+
+    musicList.scrollBy({
+
+        top: -180,
+
+        left: 0,
+
+        behavior: "smooth"
+
+    });
+
+
+    printTerminal(
+        "SYSTEM: Desplazando base de datos hacia arriba.",
+        "system-text"
+    );
+
+
+    iniciarEscucha();
+
+}
+
+
+
+/* ============================================================
+   CERRAR LISTA
+============================================================ */
+
+function cerrarLista(){
+
+    musicPanel.classList.remove(
+        "visible"
+    );
+
+
+    printTerminal(
+        "SYSTEM: Base de datos de audio cerrada.",
+        "system-text"
+    );
+
+
+    iniciarEscucha();
+
+}
+
+
+
+/* ============================================================
+   PROCESAR COMANDOS
+============================================================ */
+
+function procesarLogica(voz){
+
+    const texto =
+        normalizar(voz);
+
+
+
+    /* ========================================================
+       FASE 1
+       IDENTIFICACIÓN
+    ======================================================== */
+
+    if(fase === 1){
+
+        const nombre =
+            extraerNombre(
+                voz
+            );
+
+
+        if(nombre){
+
+            nombreUsuario =
+                nombre;
+
+
+            fase = 2;
+
+
+            madreHabla(
+                `Bienvenido ${nombreUsuario}. ¿En qué puedo ayudarte?`
+            );
+
+
+            return;
+
+        }
+
+
+        madreHabla(
+            "Indique su código de acceso seguido de su nombre."
+        );
+
+
+        return;
+
+    }
+
+
+
+    /* ========================================================
+       PAUSA
+    ======================================================== */
+
+    if(
+        texto === "pausa" ||
+        texto === "pause" ||
+        texto.includes("pausa musica") ||
+        texto.includes("pausar musica") ||
+        texto.includes("pausar la musica")
+    ){
+
+        audio.pause();
+
+
+        madreHabla(
+            "Reproducción pausada."
+        );
+
+
+        return;
+
+    }
+
+
+
+    /* ========================================================
+       REANUDAR
+    ======================================================== */
+
+    if(
+        texto === "reanudar" ||
+        texto === "reanuda" ||
+        texto === "reanudar musica" ||
+        texto === "reanuda musica" ||
+        texto === "continuar" ||
+        texto === "continua" ||
+        texto === "continua musica" ||
+        texto === "reproducir"
+    ){
+
+        madreHabla(
+            "Reanudando reproducción.",
+            () => {
+
+                audio.play()
+                    .then(() => {
+
+                        printTerminal(
+                            "SYSTEM: AUDIO RESUMED.",
+                            "system-green"
+                        );
+
+                    })
+                    .catch(error => {
+
+                        console.log(
+                            "No se pudo reanudar:",
+                            error
+                        );
+
+                    });
+
+
+                iniciarEscucha();
+
+            }
+        );
+
+
+        return;
+
+    }
+
+
+
+    /* ========================================================
+       SIGUIENTE
+    ======================================================== */
+
+    if(
+        texto === "siguiente" ||
+        texto === "siguiente musica" ||
+        texto === "siguiente cancion"
+    ){
+
+        madreHabla(
+            "Siguiente selección.",
+            () => {
+
+                siguienteMusica();
+
+                iniciarEscucha();
+
+            }
+        );
+
+
+        return;
+
+    }
+
+
+
+    /* ========================================================
+       ANTERIOR
+    ======================================================== */
+
+    if(
+        texto === "anterior" ||
+        texto === "anterior musica" ||
+        texto === "anterior cancion"
+    ){
+
+        madreHabla(
+            "Selección anterior.",
+            () => {
+
+                anteriorMusica();
+
+                iniciarEscucha();
+
+            }
+        );
+
+
+        return;
+
+    }
+
+
+
+    /* ========================================================
+       LISTA DE MÚSICAS
+    ======================================================== */
+
+    if(
+        texto === "lista de musicas" ||
+        texto === "lista de canciones" ||
+        texto.includes("mostrar lista de musicas") ||
+        texto.includes("mostrar lista de canciones") ||
+        texto.includes("abre la lista de musicas") ||
+        texto.includes("abre la lista de canciones") ||
+        texto.includes("lista musica") ||
+        texto.includes("lista canciones")
+    ){
+
+        mostrarLista();
+
+
+        madreHabla(
+            `Aquí tienes la lista, ${nombreUsuario}.`
+        );
+
+
+        return;
+
+    }
+
+
+
+    /* ========================================================
+       BAJAR LISTA
+    ======================================================== */
+
+    if(
+        texto === "baja" ||
+        texto === "bajar" ||
+        texto === "baja la lista" ||
+        texto === "bajar la lista" ||
+        texto === "baja el listado" ||
+        texto === "bajar el listado" ||
+        texto === "hacia abajo"
+    ){
+
+        bajarLista();
+
+        return;
+
+    }
+
+
+
+    /* ========================================================
+       SUBIR LISTA
+    ======================================================== */
+
+    if(
+        texto === "sube" ||
+        texto === "subir" ||
+        texto === "sube la lista" ||
+        texto === "subir la lista" ||
+        texto === "sube el listado" ||
+        texto === "subir el listado" ||
+        texto === "hacia arriba"
+    ){
+
+        subirLista();
+
+        return;
+
+    }
+
+
+
+    /* ========================================================
+       CERRAR LISTA
+    ======================================================== */
+
+    if(
+        texto === "cerrar lista" ||
+        texto === "cierra lista" ||
+        texto === "cerrar"
+    ){
+
+        cerrarLista();
+
+        return;
+
+    }
+
+
+
+    /* ========================================================
+       SI LA LISTA ESTÁ ABIERTA
+    ======================================================== */
+
+    if(
+        musicPanel.classList.contains(
+            "visible"
+        )
+    ){
+
+        const seleccion =
+            buscarMusica(
+                texto
+            );
+
+
+        if(seleccion >= 0){
+
+            musicPanel.classList.remove(
+                "visible"
+            );
+
+
+            indiceMusica =
+                seleccion;
+
+
+            madreHabla(
+                `Sí, ${nombreUsuario}. Como desees.`,
+                () => {
+
+                    printTerminal(
+                        "SYSTEM: Transfiriendo audio a canales internos de la Covenant...",
+                        "system-text"
+                    );
+
+
+                    reproducirMusica(
+                        seleccion
+                    );
+
+
+                    iniciarEscucha();
+
+                }
+            );
+
+
+            return;
+
+        }
+
+    }
+
+
+
+    /* ========================================================
+       MÚSICA DIRECTA
+    ======================================================== */
+
+    const seleccionDirecta =
+        buscarMusica(
+            texto
+        );
+
+
+    if(seleccionDirecta >= 0){
+
+        indiceMusica =
+            seleccionDirecta;
+
+
+        madreHabla(
+            `Sí, ${nombreUsuario}. Como desees.`,
+            () => {
+
+                printTerminal(
+                    "SYSTEM: Transfiriendo audio a canales internos de la Covenant...",
+                    "system-text"
+                );
+
+
+                reproducirMusica(
+                    seleccionDirecta
+                );
+
+
+                iniciarEscucha();
+
+            }
+        );
+
+
+        return;
+
+    }
+
+
+
+    /* ========================================================
+       FASE 2
+    ======================================================== */
+
+    if(fase === 2){
+
+        if(
+            texto.includes("musica") ||
+            texto.includes("música") ||
+            texto.includes("cancion") ||
+            texto.includes("canciones")
+        ){
+
+            fase = 3;
+
+
+            madreHabla(
+                "¿Selección?"
+            );
+
+
+            return;
+
+        }
+
+
+        madreHabla(
+            `Orden no reconocida. ¿En qué puedo ayudarte, ${nombreUsuario}?`
+        );
+
+
+        return;
+
+    }
+
+
+
+    /* ========================================================
+       FASE 3
+    ======================================================== */
+
+    if(fase === 3){
+
+        const seleccion =
+            buscarMusica(
+                texto
+            );
+
+
+        if(seleccion >= 0){
+
+            indiceMusica =
+                seleccion;
+
+
+            madreHabla(
+                `Sí, ${nombreUsuario}. Como desees.`,
+                () => {
+
+                    printTerminal(
+                        "SYSTEM: Transfiriendo audio a canales internos de la Covenant...",
+                        "system-text"
+                    );
+
+
+                    reproducirMusica(
+                        seleccion
+                    );
+
+
+                    iniciarEscucha();
+
+                }
+            );
+
+
+        }else{
+
+            madreHabla(
+                "Selección no encontrada. Puede decir lista de músicas para consultar las opciones."
+            );
+
+        }
+
+
+        return;
+
+    }
+
+}
+
+
+
+/* ============================================================
+   BOTÓN PLAY
+============================================================ */
+
+document
+    .getElementById("play-btn")
+    .addEventListener(
+        "click",
+        () => {
+
+            audio.play()
+                .catch(error => {
+
+                    console.log(
+                        error
+                    );
+
+                });
+
+        }
+    );
+
+
+
+/* ============================================================
+   BOTÓN PAUSA
+============================================================ */
+
+document
+    .getElementById("pause-btn")
+    .addEventListener(
+        "click",
+        () => {
+
+            audio.pause();
+
+        }
+    );
+
+
+
+/* ============================================================
+   BOTÓN SIGUIENTE
+============================================================ */
+
+document
+    .getElementById("next-btn")
+    .addEventListener(
+        "click",
+        () => {
+
+            siguienteMusica();
+
+        }
+    );
+
+
+
+/* ============================================================
+   BOTÓN ANTERIOR
+============================================================ */
+
+document
+    .getElementById("prev-btn")
+    .addEventListener(
+        "click",
+        () => {
+
+            anteriorMusica();
+
+        }
+    );
+
+
+
+/* ============================================================
+   BOTÓN LISTA
+============================================================ */
+
+document
+    .getElementById("list-btn")
+    .addEventListener(
+        "click",
+        () => {
+
+            mostrarLista();
+
+        }
+    );
+
+
+
+/* ============================================================
+   CERRAR LISTA
+============================================================ */
+
+document
+    .getElementById("close-list")
+    .addEventListener(
+        "click",
+        () => {
+
+            cerrarLista();
+
+        }
+    );
+
+
+
+/* ============================================================
+   INICIALIZACIÓN
+============================================================ */
+
+startBtn.addEventListener(
+    "click",
+    async () => {
+
+        startBtn.classList.add(
+            "hidden"
+        );
+
+
+        cargarVozFemenina();
+
+
+        await iniciarMedidorVoz();
+
+
+        sistemaInicializado =
+            true;
+
+
+        printTerminal(
+            "SYSTEM: Protocolo de identificación vocal habilitado.",
+            "system-green"
+        );
+
+
+        printTerminal(
+            "SYSTEM: Esperando código de acceso...",
+            "system-text"
+        );
+
+
+        setTimeout(
+            () => {
+
+                iniciarEscucha();
+
+            },
+            500
+        );
+
+    }
+);
+
+
+
+/* ============================================================
+   AUDIO TERMINA
+============================================================ */
+
+audio.addEventListener(
+    "ended",
+    () => {
+
+        printTerminal(
+            "SYSTEM: Reproducción finalizada.",
+            "system-green"
+        );
+
+
+        iniciarEscucha();
+
+    }
+);
+
+
+</script>
+
+
+</div>
+
+
+</body>
+
+</html>
+

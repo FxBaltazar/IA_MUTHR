@@ -1,0 +1,2646 @@
+/* ================================================================ MUTHR / COVENANT INTERFACE WEYLAND-YUTANI CORPORATION ENHANCED HOLOGRAPHIC SYSTEM ================================================================ */ /* ================================================================ RESET ================================================================ */ *{ box-sizing:border-box; margin:0; padding:0; } html, body{ width:100%; height:100%; overflow:hidden; } body{ background: radial-gradient( ellipse at 50% 40%, #092727 0%, #041919 28%, #021010 55%, #010606 78%, #000 100% ); color:#b8ffff; font-family: "Courier New", Consolas, monospace; letter-spacing:.5px; } /* ================================================================ SCANLINES ================================================================ */ .scanlines{ position:fixed; inset:0; pointer-events:none; z-index:1000; background: repeating-linear-gradient( to bottom, rgba(255,255,255,.035) 0px, rgba(255,255,255,.035) 1px, transparent 1px, transparent 4px ); opacity:.5; mix-blend-mode:screen; } .noise{ position:fixed; inset:0; pointer-events:none; z-index:999; opacity:.035; background: repeating-radial-gradient( circle at 50% 50%, #fff 0px, transparent 1px, transparent 3px ); } /* ================================================================ CONTENEDOR PRINCIPAL ================================================================ */ .terminal-container{ width:100vw; height:100vh; padding: clamp(12px,2vh,24px) clamp(14px,2.5vw,35px); display:flex; flex-direction:column; position:relative; overflow:hidden; } /* ================================================================ HEADER ================================================================ */ .top-header{ flex: 0 0 clamp(95px,15vh,145px); position:relative; border-left: 3px solid #6fffff; padding-left: clamp(12px,2vw,25px); } .top-header::before{ content:""; position:absolute; left:-3px; top:0; width:3px; height:55%; background:#aaffff; box-shadow: 0 0 8px #6fffff, 0 0 20px rgba(80,255,255,.6); } .brand{ display:flex; align-items:center; gap:12px; font-size: clamp(18px,2vw,30px); font-weight:bold; color:#e3ffff; text-shadow: 0 0 5px #7fffff, 0 0 15px rgba(80,255,255,.5), 0 0 30px rgba(80,255,255,.15); } .triangle{ color:#6fffff; font-size:1.1em; text-shadow: 0 0 10px #6fffff; } .status{ position:absolute; top:5px; right:0; font-size:11px; color:#73ffbd; letter-spacing:2px; text-shadow: 0 0 8px rgba(100,255,190,.5); } .status-dot{ display:inline-block; width:7px; height:7px; margin-right:7px; border-radius:50%; background:#70ffc1; box-shadow: 0 0 5px #70ffc1, 0 0 15px #70ffc1, 0 0 25px rgba(112,255,193,.6); animation: blink 1.5s infinite; } .header-line{ width:100%; height:1px; margin-top:12px; background: linear-gradient( 90deg, #6fffff, rgba(100,255,255,.4), rgba(100,255,255,.12), transparent ); box-shadow: 0 0 8px rgba(80,255,255,.35); } .top-header h2{ margin-top:10px; font-size: clamp(11px,1.2vw,17px); font-weight:normal; color:#72eeee; letter-spacing:2px; text-shadow: 0 0 8px rgba(80,255,255,.25); } .top-header h2 span{ color:#6fffbd; text-shadow: 0 0 8px rgba(100,255,190,.4); } .header-sub{ margin-top:7px; font-size:9px; color:#477979; letter-spacing:2px; } /* ================================================================ MAIN ================================================================ */ .main-content{ flex:1; min-height:0; display:grid; grid-template-columns: minmax(0,1.35fr) minmax(340px,.9fr); gap: clamp(12px,2vw,30px); } /* ================================================================ PANELS ================================================================ */ .left-panel, .right-panel{ min-height:0; position:relative; border: 1px solid rgba(94,255,255,.32); background: linear-gradient( 135deg, rgba(6,38,38,.82), rgba(0,13,13,.9) ); box-shadow: inset 0 0 45px rgba(0,255,255,.045), inset 0 0 8px rgba(100,255,255,.05), 0 0 20px rgba(0,255,255,.04); overflow:hidden; } .left-panel::after, .right-panel::after{ content:""; position:absolute; inset:0; pointer-events:none; background: linear-gradient( 135deg, rgba(100,255,255,.025), transparent 30%, transparent 70%, rgba(100,255,255,.02) ); } .left-panel{ display:flex; flex-direction:column; padding:14px; } .right-panel{ display:flex; flex-direction:column; padding:14px; } /* ================================================================ DECORACIÓN DE ESQUINAS ================================================================ */ .left-panel::before, .right-panel::before{ content:""; position:absolute; width:22px; height:22px; top:-1px; left:-1px; border-top: 2px solid #8fffff; border-left: 2px solid #8fffff; box-shadow: -2px -2px 10px rgba(80,255,255,.3); } .left-panel > *, .right-panel > *{ position:relative; z-index:2; } /* ================================================================ PANEL TITLE ================================================================ */ .panel-title{ flex: 0 0 25px; color:#6fffff; font-size:11px; letter-spacing:2px; border-bottom: 1px solid rgba(100,255,255,.25); padding-bottom:7px; text-shadow: 0 0 8px rgba(80,255,255,.35); } .panel-title span{ color:#6fffbd; margin-right:10px; text-shadow: 0 0 8px rgba(100,255,190,.45); } /* ================================================================ CONSOLA ================================================================ */ .console-box{ flex:1; min-height:0; overflow-y:auto; overflow-x:hidden; padding: 14px 15px; margin-top:10px; background: radial-gradient( ellipse at 50% 0%, rgba(0,130,130,.15), transparent 65% ), linear-gradient( 180deg, rgba(0,12,12,.72), rgba(0,4,4,.8) ); border: 1px solid rgba(80,255,255,.16); box-shadow: inset 0 0 25px rgba(0,255,255,.025); font-size: clamp(11px,1vw,14px); line-height:1.65; } .console-box::-webkit-scrollbar{ width:5px; } .console-box::-webkit-scrollbar-track{ background:#021010; } .console-box::-webkit-scrollbar-thumb{ background:#286d6d; box-shadow: 0 0 5px rgba(80,255,255,.3); } .system-text{ color:#699494; } .system-green{ color:#65ffb5; text-shadow: 0 0 8px rgba(60,255,170,.45); } .user-text{ color:#e0ffff; text-shadow: 0 0 5px rgba(150,255,255,.2); } .madre-text{ color:#8cffff; text-shadow: 0 0 7px rgba(100,255,255,.5), 0 0 18px rgba(100,255,255,.15); border-left: 2px solid #74ffff; padding-left:9px; } /* ================================================================ VOICE MONITOR ================================================================ */ .voice-monitor{ flex: 0 0 clamp(72px,10vh,90px); margin-top:10px; border: 1px solid rgba(100,255,255,.23); background: linear-gradient( 180deg, rgba(0,25,25,.7), rgba(0,12,12,.8) ); padding:9px 12px; box-shadow: inset 0 0 20px rgba(0,255,255,.025); } .monitor-header, .voice-status{ display:flex; justify-content:space-between; font-size:9px; letter-spacing:1px; color:#528787; } .frequency-container{ height:35px; margin: 7px 0; display:flex; align-items:flex-end; overflow:hidden; } .frequency-bars{ width:100%; height:100%; display:flex; align-items:flex-end; gap:3px; } .frequency-bars i{ flex:1; min-height:3px; height:4%; background: linear-gradient( to top, #176666, #62ffff, #c8ffff ); box-shadow: 0 0 5px rgba(70,255,255,.35), 0 0 12px rgba(70,255,255,.12); transition: height .06s linear; } .voice-status{ color:#416e6e; } #mic-status.active{ color:#71ffbd; text-shadow: 0 0 7px #71ffbd, 0 0 15px rgba(100,255,190,.45); } /* ================================================================ CONTROLES ================================================================ */ .music-controls{ flex: 0 0 62px; display:flex; gap:7px; margin-top:9px; } .control-btn{ flex:1; border: 1px solid rgba(100,255,255,.3); background: linear-gradient( 180deg, rgba(14,54,54,.9), rgba(2,18,18,.95) ); color:#79ffff; cursor:pointer; font-family:inherit; font-size:17px; transition: .2s; position:relative; overflow:hidden; } .control-btn::before{ content:""; position:absolute; left:-100%; top:0; width:100%; height:1px; background:#8fffff; box-shadow: 0 0 10px #6fffff; transition:.3s; } .control-btn:hover::before{ left:0; } .control-btn small{ display:block; font-size:7px; letter-spacing:1px; margin-top:4px; color:#518888; } .control-btn:hover{ color:#fff; border-color:#75ffff; background: rgba(20,100,100,.45); box-shadow: inset 0 0 15px rgba(80,255,255,.1), 0 0 10px rgba(80,255,255,.15); transform:translateY(-1px); } .control-btn:active{ transform: translateY(1px) scale(.98); } .main-control{ color:#71ffbd; } .list-control{ flex:1.2; } /* ================================================================ HOLOGRAM CONTAINER ================================================================ */ .hologram-container{ position:relative; flex:1; min-height:0; display:flex; align-items:center; justify-content:center; overflow:hidden; background: radial-gradient( circle at center, rgba(100,255,255,.12) 0%, rgba(30,255,255,.06) 20%, rgba(0,100,100,.035) 42%, transparent 70% ); } /* ================================================================ AURA DEL HOLOGRAMA ================================================================ */ .hologram-container::before{ content:""; position:absolute; width:68%; aspect-ratio:1; border-radius:50%; background: radial-gradient( circle, rgba(70,255,255,.12), rgba(40,255,255,.045) 30%, transparent 68% ); filter:blur(8px); animation: hologramAura 4s ease-in-out infinite; } .hologram-container::after{ content:""; position:absolute; width:78%; height:78%; border: 1px solid rgba(80,255,255,.08); border-radius:50%; box-shadow: 0 0 40px rgba(80,255,255,.05), inset 0 0 40px rgba(80,255,255,.04); animation: slowPulse 5s ease-in-out infinite; } /* ================================================================ RINGS ================================================================ */ .ring{ position:absolute; border: 1px solid rgba(85,255,255,.38); border-radius:50%; transform-style:preserve-3d; box-shadow: 0 0 8px rgba(70,255,255,.08); } /* ANILLO EXTERIOR */ .ring-one{ width:min(74%,450px); aspect-ratio:1; animation: rotateOne 18s linear infinite; border-style:dashed; border-color: rgba(80,255,255,.42); box-shadow: 0 0 10px rgba(80,255,255,.1); } /* SEGUNDO ANILLO */ .ring-two{ width:min(61%,370px); aspect-ratio:1; border-color: rgba(100,255,190,.42); border-width:1px; animation: rotateTwo 13s linear infinite reverse; box-shadow: 0 0 12px rgba(100,255,190,.08); } /* TERCER ANILLO */ .ring-three{ width:min(46%,280px); aspect-ratio:1; border-style:dotted; border-color: rgba(100,255,255,.5); animation: rotateThree 9s linear infinite; } /* CUARTO ANILLO */ .ring-four{ width:min(33%,200px); aspect-ratio:1; border-color: rgba(100,255,255,.7); border-width:2px; animation: pulseRing 2.5s ease-in-out infinite; box-shadow: 0 0 15px rgba(80,255,255,.18), inset 0 0 15px rgba(80,255,255,.1); } /* ================================================================ EJES ================================================================ */ .axis{ position:absolute; background: linear-gradient( 90deg, transparent, rgba(90,255,255,.3), transparent ); } .horizontal{ width:82%; height:1px; box-shadow: 0 0 7px rgba(80,255,255,.25); } .vertical{ width:1px; height:82%; background: linear-gradient( to bottom, transparent, rgba(90,255,255,.3), transparent ); } .cross{ position:absolute; width:60%; height:60%; border: 1px solid rgba(90,255,255,.13); box-shadow: 0 0 8px rgba(80,255,255,.04); } .cross-a{ transform:rotate(45deg); } .cross-b{ transform:rotate(-45deg); } /* ================================================================ NÚCLEO PRINCIPAL ================================================================ */ .core{ width:120px; height:120px; border-radius:50%; position:relative; display:flex; align-items:center; justify-content:center; z-index:10; background: radial-gradient( circle, #ffffff 0%, #caffff 3%, #5fffff 9%, rgba(30,245,245,.8) 17%, rgba(0,190,190,.45) 30%, rgba(0,90,90,.22) 50%, transparent 72% ); box-shadow: 0 0 12px #53ffff, 0 0 25px #53ffff, 0 0 55px rgba(50,255,255,.7), 0 0 100px rgba(50,255,255,.3), 0 0 160px rgba(50,255,255,.12); animation: corePulse 2s ease-in-out infinite; } .core::before{ content:""; position:absolute; inset:-14px; border: 1px solid rgba(100,255,255,.35); border-radius:50%; box-shadow: 0 0 15px rgba(80,255,255,.25), inset 0 0 15px rgba(80,255,255,.12); animation: coreHalo 2.5s ease-in-out infinite; } .core::after{ content:""; position:absolute; inset:-27px; border: 1px solid rgba(80,255,255,.13); border-radius:50%; animation: coreOuter 4s linear infinite; } .core-inner{ position:absolute; width:50px; height:50px; border: 1px solid rgba(255,255,255,.9); border-radius:50%; box-shadow: inset 0 0 20px #6fffff, inset 0 0 35px rgba(80,255,255,.4), 0 0 15px #6fffff, 0 0 30px rgba(80,255,255,.4); animation: innerPulse 1.2s ease-in-out infinite; } .core-text{ z-index:20; font-size:10px; letter-spacing:3px; color:#f2ffff; text-shadow: 0 0 8px #6fffff, 0 0 18px #6fffff; } /* ================================================================ MUTHR HABLANDO EFECTO MUCHO MÁS NOTORIO ================================================================ */ .core.talking{ animation: speaking .32s ease-in-out infinite alternate; box-shadow: 0 0 18px #ffffff, 0 0 35px #53ffff, 0 0 70px #53ffff, 0 0 120px rgba(50,255,255,.8), 0 0 190px rgba(50,255,255,.35); } .core.talking::before{ border-color: rgba(150,255,255,.75); box-shadow: 0 0 25px rgba(80,255,255,.7), inset 0 0 25px rgba(80,255,255,.3); animation: talkingHalo .45s ease-in-out infinite alternate; } .core.talking::after{ border-color: rgba(100,255,255,.3); animation: talkingOuter 1s linear infinite; } .core.talking .core-inner{ border-color:#ffffff; box-shadow: inset 0 0 25px #ffffff, inset 0 0 45px #6fffff, 0 0 20px #ffffff, 0 0 40px #6fffff; animation: speakingInner .25s ease-in-out infinite alternate; } /* ================================================================ ORBS / PARTÍCULAS ORBITALES ================================================================ */ .orb{ position:absolute; width:6px; height:6px; border-radius:50%; background:#bfffff; box-shadow: 0 0 6px #74ffff, 0 0 14px #74ffff, 0 0 25px rgba(80,255,255,.6); z-index:8; } /* ÓRBITA 1 */ .orb-one{ top:28%; left:22%; animation: orbitOne 7s linear infinite; } /* ÓRBITA 2 */ .orb-two{ top:68%; left:30%; width:4px; height:4px; animation: orbitTwo 5s linear infinite reverse; } /* ÓRBITA 3 */ .orb-three{ top:32%; right:23%; width:7px; height:7px; animation: orbitThree 9s linear infinite; } /* ÓRBITA 4 */ .orb-four{ bottom:21%; right:28%; width:4px; height:4px; animation: orbitFour 6s linear infinite reverse; } /* ================================================================ DATOS HOLOGRÁFICOS ================================================================ */ .holo-data{ position:absolute; font-size:8px; color:#57bbbb; letter-spacing:1px; text-shadow: 0 0 7px rgba(80,255,255,.25); z-index:5; } .data-top{ top:10%; } .data-left{ left:5%; } .data-right{ right:5%; } .data-bottom{ bottom:10%; } /* ================================================================ SYSTEM READOUT ================================================================ */ .system-readout{ flex: 0 0 55px; display:grid; grid-template-columns: repeat(4,1fr); gap:7px; margin-top:8px; } .system-readout div{ border-top: 1px solid rgba(100,255,255,.2); padding-top:7px; position:relative; } .system-readout div::before{ content:""; position:absolute; top:-1px; left:0; width:20px; height:1px; background:#72ffff; box-shadow: 0 0 7px #72ffff; } .system-readout span{ display:block; font-size:7px; color:#467373; margin-bottom:3px; } .system-readout b{ font-size:9px; color:#77dcdc; text-shadow: 0 0 6px rgba(80,255,255,.25); } /* ================================================================ BOTÓN INICIAL ================================================================ */ .start-btn{ position:absolute; left:50%; top:50%; transform: translate(-50%,-50%); z-index:200; min-width:280px; padding:18px 30px; display:flex; justify-content:center; align-items:center; gap:14px; border: 1px solid #6fffff; background: linear-gradient( 180deg, rgba(4,35,35,.98), rgba(0,15,15,.98) ); color:#7fffff; font-family:inherit; letter-spacing:2px; cursor:pointer; box-shadow: 0 0 25px rgba(60,255,255,.18), inset 0 0 20px rgba(60,255,255,.08); transition:.25s; } .start-btn:hover{ background: rgba(20,80,80,.95); box-shadow: 0 0 40px rgba(60,255,255,.3), 0 0 80px rgba(60,255,255,.1), inset 0 0 25px rgba(60,255,255,.15); transform: translate(-50%,-50%) scale(1.02); } .start-icon{ font-size:25px; animation: blink 1.2s infinite; text-shadow: 0 0 12px #6fffff; } .start-btn small{ display:block; margin-top:5px; font-size:8px; color:#518989; } .start-btn.hidden{ display:none; } /* ================================================================ PANEL DE MÚSICA ================================================================ */ .music-panel{ position:absolute; z-index:500; width: min(650px,80vw); max-height: 70vh; left:50%; top:50%; transform: translate(-50%,-50%) scale(.92); opacity:0; pointer-events:none; background: linear-gradient( 135deg, rgba(3,25,25,.98), rgba(0,10,10,.98) ); border: 1px solid #67ffff; box-shadow: 0 0 45px rgba(50,255,255,.25), 0 0 90px rgba(50,255,255,.08), inset 0 0 30px rgba(50,255,255,.05); transition: .25s; } .music-panel.visible{ opacity:1; pointer-events:auto; transform: translate(-50%,-50%) scale(1); } .music-panel-header{ height:50px; display:flex; align-items:center; justify-content:space-between; padding: 0 15px; border-bottom: 1px solid rgba(100,255,255,.25); color:#76ffff; font-size:11px; letter-spacing:2px; text-shadow: 0 0 8px rgba(80,255,255,.4); } #close-list{ border:0; background:none; color:#72ffff; font-size:25px; cursor:pointer; transition:.2s; } #close-list:hover{ color:#ffffff; text-shadow: 0 0 10px #6fffff; transform: rotate(90deg); } .music-list{ max-height: calc(70vh - 50px); overflow-y:auto; padding:10px; } .music-list::-webkit-scrollbar{ width:6px; } .music-list::-webkit-scrollbar-track{ background:#021010; } .music-list::-webkit-scrollbar-thumb{ background:#286d6d; box-shadow: 0 0 8px rgba(80,255,255,.3); } .music-item{ width:100%; min-height:47px; display:flex; align-items:center; gap:12px; border: 1px solid rgba(100,255,255,.1); margin-bottom:6px; padding: 8px 12px; background: linear-gradient( 90deg, rgba(5,35,35,.7), rgba(2,20,20,.7) ); color:#72dddd; font-family:inherit; cursor:pointer; text-align:left; transition:.15s; } .music-item:hover{ border-color:#6fffff; background: rgba(20,80,80,.65); color:#fff; box-shadow: inset 0 0 15px rgba(80,255,255,.08), 0 0 10px rgba(80,255,255,.08); transform: translateX(3px); } .music-number{ color:#5dffff; font-size:10px; text-shadow: 0 0 7px rgba(80,255,255,.5); } .music-name{ flex:1; font-size:10px; } .music-arrow{ color:#61ffb2; text-shadow: 0 0 8px rgba(100,255,190,.5); } /* ================================================================ ANIMACIONES GENERALES ================================================================ */ @keyframes blink{ 0%, 100%{ opacity:1; } 50%{ opacity:.35; } } /* ================================================================ ROTACIÓN ANILLO 1 ================================================================ */ @keyframes rotateOne{ from{ transform:rotate(0deg); } to{ transform:rotate(360deg); } } /* ================================================================ ROTACIÓN ANILLO 2 ================================================================ */ @keyframes rotateTwo{ from{ transform:rotate(0deg); } to{ transform:rotate(360deg); } } /* ================================================================ ROTACIÓN ANILLO 3 ================================================================ */ @keyframes rotateThree{ 0%{ transform: rotate(0deg) scale(1); } 50%{ transform: rotate(180deg) scale(.94); } 100%{ transform: rotate(360deg) scale(1); } } /* ================================================================ PULSO DEL ANILLO ================================================================ */ @keyframes pulseRing{ 0%, 100%{ transform:scale(.94); opacity:.45; } 50%{ transform:scale(1.07); opacity:1; } } /* ================================================================ AURA HOLOGRÁFICA ================================================================ */ @keyframes hologramAura{ 0%, 100%{ transform:scale(.9); opacity:.6; } 50%{ transform:scale(1.08); opacity:1; } } @keyframes slowPulse{ 0%, 100%{ transform:scale(.95); opacity:.45; } 50%{ transform:scale(1.04); opacity:.9; } } /* ================================================================ NÚCLEO ================================================================ */ @keyframes corePulse{ 0%, 100%{ transform:scale(.94); opacity:.82; } 50%{ transform:scale(1.05); opacity:1; } } @keyframes coreHalo{ 0%, 100%{ transform:scale(.9); opacity:.4; } 50%{ transform:scale(1.08); opacity:1; } } @keyframes coreOuter{ from{ transform: rotate(0deg) scale(.95); opacity:.3; } to{ transform: rotate(360deg) scale(1.05); opacity:.7; } } @keyframes innerPulse{ 0%, 100%{ transform:scale(.9); opacity:.65; } 50%{ transform:scale(1.12); opacity:1; } } /* ================================================================ MUTHR HABLANDO ================================================================ */ @keyframes speaking{ from{ transform: scale(.94); } to{ transform: scale(1.18); } } @keyframes talkingHalo{ from{ transform:scale(.85); opacity:.45; } to{ transform:scale(1.18); opacity:1; } } @keyframes talkingOuter{ from{ transform: rotate(0deg) scale(.9); opacity:.2; } to{ transform: rotate(360deg) scale(1.15); opacity:.8; } } @keyframes speakingInner{ from{ transform:scale(.8); } to{ transform:scale(1.2); } } /* ================================================================ ÓRBITAS DE PARTÍCULAS ================================================================ */ @keyframes orbitOne{ 0%{ transform: rotate(0deg) translateX(70px) rotate(0deg); } 100%{ transform: rotate(360deg) translateX(70px) rotate(-360deg); } } @keyframes orbitTwo{ 0%{ transform: rotate(0deg) translateX(105px); } 100%{ transform: rotate(360deg) translateX(105px); } } @keyframes orbitThree{ 0%{ transform: rotate(0deg) translateX(85px); } 100%{ transform: rotate(360deg) translateX(85px); } } @keyframes orbitFour{ 0%{ transform: rotate(0deg) translateX(120px); } 100%{ transform: rotate(360deg) translateX(120px); } } /* ================================================================ RESPONSIVE ================================================================ */ @media( max-width:850px ){ .main-content{ grid-template-columns: 1fr; } .right-panel{ display:none; } .top-header{ flex-basis:105px; } .status{ display:none; } } @media( max-height:700px ){ .top-header{ flex-basis:85px; } .header-sub{ display:none; } .voice-monitor{ flex-basis:65px; } .music-controls{ flex-basis:55px; } .core{ width:100px; height:100px; } } @media( max-width:500px ){ .terminal-container{ padding: 10px; } .left-panel{ padding:10px; } .music-panel{ width:92vw; } .music-item{ min-height:52px; } .music-name{ font-size:9px; } } /* ============================================================ MUTHR HOLOGRAM VIDEO ============================================================ */ .hologram-video-core { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; background: transparent; border: none; box-shadow: none; } /* ============================================================ VIDEO ============================================================ */ .muthr-hologram-video { position: relative; width: 100%; height: 100%; object-fit: contain; display: block; background: transparent; pointer-events: none; mix-blend-mode: screen; opacity: 0.92; filter: brightness(1.15) contrast(1.12) saturate(0.85); animation: hologramFlicker 5s infinite; } /* ============================================================ SCANLINES ============================================================ */ .hologram-video-core::before { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: repeating-linear-gradient( to bottom, transparent 0px, transparent 3px, rgba(255,255,255,0.035) 4px, transparent 5px ); animation: hologramScan 4s linear infinite; } /* ============================================================ BRILLO ============================================================ */ .hologram-video-core::after { content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none; background: radial-gradient( ellipse at center, rgba(255,255,255,0.08), transparent 65% ); mix-blend-mode: screen; animation: hologramPulse 2.8s ease-in-out infinite; } /* ============================================================ ESCANEO ============================================================ */ @keyframes hologramScan { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } } /* ============================================================ PULSO ============================================================ */ @keyframes hologramPulse { 0% { opacity: 0.25; } 50% { opacity: 0.65; } 100% { opacity: 0.25; } } /* ============================================================ INTERFERENCIA ============================================================ */ @keyframes hologramFlicker { 0% { opacity: 0.92; transform: translateX(0); } 48% { opacity: 0.92; transform: translateX(0); } 49% { opacity: 0.75; transform: translateX(-1px); } 50% { opacity: 0.95; transform: translateX(1px); } 51% { opacity: 0.82; transform: translateX(0); } 100% { opacity: 0.92; transform: translateX(0); } }/* ================================================================
+   MUTHR / COVENANT INTERFACE
+   WEYLAND-YUTANI CORPORATION
+   ENHANCED HOLOGRAPHIC SYSTEM
+================================================================ */
+
+
+/* ================================================================
+   RESET
+================================================================ */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+}
+
+
+body{
+
+    background:
+        radial-gradient(
+            ellipse at 50% 40%,
+            #092727 0%,
+            #041919 28%,
+            #021010 55%,
+            #010606 78%,
+            #000 100%
+        );
+
+    color:#b8ffff;
+
+    font-family:
+        "Courier New",
+        Consolas,
+        monospace;
+
+    letter-spacing:.5px;
+
+}
+
+
+/* ================================================================
+   SCANLINES
+================================================================ */
+
+.scanlines{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:1000;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,.035) 0px,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+
+    opacity:.5;
+
+    mix-blend-mode:screen;
+
+}
+
+
+.noise{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:999;
+
+    opacity:.035;
+
+    background:
+        repeating-radial-gradient(
+            circle at 50% 50%,
+            #fff 0px,
+            transparent 1px,
+            transparent 3px
+        );
+
+}
+
+
+/* ================================================================
+   CONTENEDOR PRINCIPAL
+================================================================ */
+
+.terminal-container{
+
+    width:100vw;
+
+    height:100vh;
+
+    padding:
+        clamp(12px,2vh,24px)
+        clamp(14px,2.5vw,35px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+/* ================================================================
+   HEADER
+================================================================ */
+
+.top-header{
+
+    flex:
+        0 0
+        clamp(95px,15vh,145px);
+
+    position:relative;
+
+    border-left:
+        3px solid #6fffff;
+
+    padding-left:
+        clamp(12px,2vw,25px);
+
+}
+
+
+.top-header::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-3px;
+
+    top:0;
+
+    width:3px;
+
+    height:55%;
+
+    background:#aaffff;
+
+    box-shadow:
+        0 0 8px #6fffff,
+        0 0 20px rgba(80,255,255,.6);
+
+}
+
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:
+        clamp(18px,2vw,30px);
+
+    font-weight:bold;
+
+    color:#e3ffff;
+
+    text-shadow:
+        0 0 5px #7fffff,
+        0 0 15px rgba(80,255,255,.5),
+        0 0 30px rgba(80,255,255,.15);
+
+}
+
+
+.triangle{
+
+    color:#6fffff;
+
+    font-size:1.1em;
+
+    text-shadow:
+        0 0 10px #6fffff;
+
+}
+
+
+.status{
+
+    position:absolute;
+
+    top:5px;
+
+    right:0;
+
+    font-size:11px;
+
+    color:#73ffbd;
+
+    letter-spacing:2px;
+
+    text-shadow:
+        0 0 8px rgba(100,255,190,.5);
+
+}
+
+
+.status-dot{
+
+    display:inline-block;
+
+    width:7px;
+
+    height:7px;
+
+    margin-right:7px;
+
+    border-radius:50%;
+
+    background:#70ffc1;
+
+    box-shadow:
+        0 0 5px #70ffc1,
+        0 0 15px #70ffc1,
+        0 0 25px rgba(112,255,193,.6);
+
+    animation:
+        blink 1.5s infinite;
+
+}
+
+
+.header-line{
+
+    width:100%;
+
+    height:1px;
+
+    margin-top:12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6fffff,
+            rgba(100,255,255,.4),
+            rgba(100,255,255,.12),
+            transparent
+        );
+
+    box-shadow:
+        0 0 8px rgba(80,255,255,.35);
+
+}
+
+
+.top-header h2{
+
+    margin-top:10px;
+
+    font-size:
+        clamp(11px,1.2vw,17px);
+
+    font-weight:normal;
+
+    color:#72eeee;
+
+    letter-spacing:2px;
+
+    text-shadow:
+        0 0 8px rgba(80,255,255,.25);
+
+}
+
+
+.top-header h2 span{
+
+    color:#6fffbd;
+
+    text-shadow:
+        0 0 8px rgba(100,255,190,.4);
+
+}
+
+
+.header-sub{
+
+    margin-top:7px;
+
+    font-size:9px;
+
+    color:#477979;
+
+    letter-spacing:2px;
+
+}
+
+
+/* ================================================================
+   MAIN
+================================================================ */
+
+.main-content{
+
+    flex:1;
+
+    min-height:0;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1.35fr)
+        minmax(340px,.9fr);
+
+    gap:
+        clamp(12px,2vw,30px);
+
+}
+
+
+/* ================================================================
+   PANELS
+================================================================ */
+
+.left-panel,
+.right-panel{
+
+    min-height:0;
+
+    position:relative;
+
+    border:
+        1px solid rgba(94,255,255,.32);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(6,38,38,.82),
+            rgba(0,13,13,.9)
+        );
+
+    box-shadow:
+        inset 0 0 45px rgba(0,255,255,.045),
+        inset 0 0 8px rgba(100,255,255,.05),
+        0 0 20px rgba(0,255,255,.04);
+
+    overflow:hidden;
+
+}
+
+
+.left-panel::after,
+.right-panel::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(100,255,255,.025),
+            transparent 30%,
+            transparent 70%,
+            rgba(100,255,255,.02)
+        );
+
+}
+
+
+.left-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:14px;
+
+}
+
+
+.right-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:14px;
+
+}
+
+
+/* ================================================================
+   DECORACIÓN DE ESQUINAS
+================================================================ */
+
+.left-panel::before,
+.right-panel::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:22px;
+
+    height:22px;
+
+    top:-1px;
+
+    left:-1px;
+
+    border-top:
+        2px solid #8fffff;
+
+    border-left:
+        2px solid #8fffff;
+
+    box-shadow:
+        -2px -2px 10px rgba(80,255,255,.3);
+
+}
+
+
+.left-panel > *,
+.right-panel > *{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* ================================================================
+   PANEL TITLE
+================================================================ */
+
+.panel-title{
+
+    flex:
+        0 0 25px;
+
+    color:#6fffff;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    border-bottom:
+        1px solid rgba(100,255,255,.25);
+
+    padding-bottom:7px;
+
+    text-shadow:
+        0 0 8px rgba(80,255,255,.35);
+
+}
+
+
+.panel-title span{
+
+    color:#6fffbd;
+
+    margin-right:10px;
+
+    text-shadow:
+        0 0 8px rgba(100,255,190,.45);
+
+}
+
+
+/* ================================================================
+   CONSOLA
+================================================================ */
+
+.console-box{
+
+    flex:1;
+
+    min-height:0;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    padding:
+        14px
+        15px;
+
+    margin-top:10px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(0,130,130,.15),
+            transparent 65%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(0,12,12,.72),
+            rgba(0,4,4,.8)
+        );
+
+    border:
+        1px solid rgba(80,255,255,.16);
+
+    box-shadow:
+        inset 0 0 25px rgba(0,255,255,.025);
+
+    font-size:
+        clamp(11px,1vw,14px);
+
+    line-height:1.65;
+
+}
+
+
+.console-box::-webkit-scrollbar{
+
+    width:5px;
+
+}
+
+
+.console-box::-webkit-scrollbar-track{
+
+    background:#021010;
+
+}
+
+
+.console-box::-webkit-scrollbar-thumb{
+
+    background:#286d6d;
+
+    box-shadow:
+        0 0 5px rgba(80,255,255,.3);
+
+}
+
+
+.system-text{
+
+    color:#699494;
+
+}
+
+
+.system-green{
+
+    color:#65ffb5;
+
+    text-shadow:
+        0 0 8px rgba(60,255,170,.45);
+
+}
+
+
+.user-text{
+
+    color:#e0ffff;
+
+    text-shadow:
+        0 0 5px rgba(150,255,255,.2);
+
+}
+
+
+.madre-text{
+
+    color:#8cffff;
+
+    text-shadow:
+        0 0 7px rgba(100,255,255,.5),
+        0 0 18px rgba(100,255,255,.15);
+
+    border-left:
+        2px solid #74ffff;
+
+    padding-left:9px;
+
+}
+
+
+/* ================================================================
+   VOICE MONITOR
+================================================================ */
+
+.voice-monitor{
+
+    flex:
+        0 0
+        clamp(72px,10vh,90px);
+
+    margin-top:10px;
+
+    border:
+        1px solid rgba(100,255,255,.23);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,25,25,.7),
+            rgba(0,12,12,.8)
+        );
+
+    padding:9px 12px;
+
+    box-shadow:
+        inset 0 0 20px rgba(0,255,255,.025);
+
+}
+
+
+.monitor-header,
+.voice-status{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+
+    color:#528787;
+
+}
+
+
+.frequency-container{
+
+    height:35px;
+
+    margin:
+        7px
+        0;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    overflow:hidden;
+
+}
+
+
+.frequency-bars{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:3px;
+
+}
+
+
+.frequency-bars i{
+
+    flex:1;
+
+    min-height:3px;
+
+    height:4%;
+
+    background:
+        linear-gradient(
+            to top,
+            #176666,
+            #62ffff,
+            #c8ffff
+        );
+
+    box-shadow:
+        0 0 5px rgba(70,255,255,.35),
+        0 0 12px rgba(70,255,255,.12);
+
+    transition:
+        height .06s linear;
+
+}
+
+
+.voice-status{
+
+    color:#416e6e;
+
+}
+
+
+#mic-status.active{
+
+    color:#71ffbd;
+
+    text-shadow:
+        0 0 7px #71ffbd,
+        0 0 15px rgba(100,255,190,.45);
+
+}
+
+
+/* ================================================================
+   CONTROLES
+================================================================ */
+
+.music-controls{
+
+    flex:
+        0 0
+        62px;
+
+    display:flex;
+
+    gap:7px;
+
+    margin-top:9px;
+
+}
+
+
+.control-btn{
+
+    flex:1;
+
+    border:
+        1px solid rgba(100,255,255,.3);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(14,54,54,.9),
+            rgba(2,18,18,.95)
+        );
+
+    color:#79ffff;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+    font-size:17px;
+
+    transition:
+        .2s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.control-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-100%;
+
+    top:0;
+
+    width:100%;
+
+    height:1px;
+
+    background:#8fffff;
+
+    box-shadow:
+        0 0 10px #6fffff;
+
+    transition:.3s;
+
+}
+
+
+.control-btn:hover::before{
+
+    left:0;
+
+}
+
+
+.control-btn small{
+
+    display:block;
+
+    font-size:7px;
+
+    letter-spacing:1px;
+
+    margin-top:4px;
+
+    color:#518888;
+
+}
+
+
+.control-btn:hover{
+
+    color:#fff;
+
+    border-color:#75ffff;
+
+    background:
+        rgba(20,100,100,.45);
+
+    box-shadow:
+        inset 0 0 15px rgba(80,255,255,.1),
+        0 0 10px rgba(80,255,255,.15);
+
+    transform:translateY(-1px);
+
+}
+
+
+.control-btn:active{
+
+    transform:
+        translateY(1px)
+        scale(.98);
+
+}
+
+
+.main-control{
+
+    color:#71ffbd;
+
+}
+
+
+.list-control{
+
+    flex:1.2;
+
+}
+
+
+/* ================================================================
+   HOLOGRAM CONTAINER
+================================================================ */
+
+.hologram-container{
+
+    position:relative;
+
+    flex:1;
+
+    min-height:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(100,255,255,.12) 0%,
+            rgba(30,255,255,.06) 20%,
+            rgba(0,100,100,.035) 42%,
+            transparent 70%
+        );
+
+}
+
+
+/* ================================================================
+   AURA DEL HOLOGRAMA
+================================================================ */
+
+.hologram-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:68%;
+
+    aspect-ratio:1;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(70,255,255,.12),
+            rgba(40,255,255,.045) 30%,
+            transparent 68%
+        );
+
+    filter:blur(8px);
+
+    animation:
+        hologramAura 4s ease-in-out infinite;
+
+}
+
+
+.hologram-container::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:78%;
+
+    height:78%;
+
+    border:
+        1px solid rgba(80,255,255,.08);
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 40px rgba(80,255,255,.05),
+        inset 0 0 40px rgba(80,255,255,.04);
+
+    animation:
+        slowPulse 5s ease-in-out infinite;
+
+}
+
+
+/* ================================================================
+   RINGS
+================================================================ */
+
+.ring{
+
+    position:absolute;
+
+    border:
+        1px solid rgba(85,255,255,.38);
+
+    border-radius:50%;
+
+    transform-style:preserve-3d;
+
+    box-shadow:
+        0 0 8px rgba(70,255,255,.08);
+
+}
+
+
+.ring-one{
+
+    width:min(74%,450px);
+
+    aspect-ratio:1;
+
+    animation:
+        rotateOne 18s linear infinite;
+
+    border-style:dashed;
+
+    border-color:
+        rgba(80,255,255,.42);
+
+    box-shadow:
+        0 0 10px rgba(80,255,255,.1);
+
+}
+
+
+.ring-two{
+
+    width:min(61%,370px);
+
+    aspect-ratio:1;
+
+    border-color:
+        rgba(100,255,190,.42);
+
+    border-width:1px;
+
+    animation:
+        rotateTwo 13s linear infinite reverse;
+
+    box-shadow:
+        0 0 12px rgba(100,255,190,.08);
+
+}
+
+
+.ring-three{
+
+    width:min(46%,280px);
+
+    aspect-ratio:1;
+
+    border-style:dotted;
+
+    border-color:
+        rgba(100,255,255,.5);
+
+    animation:
+        rotateThree 9s linear infinite;
+
+}
+
+
+.ring-four{
+
+    width:min(33%,200px);
+
+    aspect-ratio:1;
+
+    border-color:
+        rgba(100,255,255,.7);
+
+    border-width:2px;
+
+    animation:
+        pulseRing 2.5s ease-in-out infinite;
+
+    box-shadow:
+        0 0 15px rgba(80,255,255,.18),
+        inset 0 0 15px rgba(80,255,255,.1);
+
+}
+
+
+/* ================================================================
+   EJES
+================================================================ */
+
+.axis{
+
+    position:absolute;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(90,255,255,.3),
+            transparent
+        );
+
+}
+
+
+.horizontal{
+
+    width:82%;
+
+    height:1px;
+
+    box-shadow:
+        0 0 7px rgba(80,255,255,.25);
+
+}
+
+
+.vertical{
+
+    width:1px;
+
+    height:82%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(90,255,255,.3),
+            transparent
+        );
+
+}
+
+
+.cross{
+
+    position:absolute;
+
+    width:60%;
+
+    height:60%;
+
+    border:
+        1px solid rgba(90,255,255,.13);
+
+    box-shadow:
+        0 0 8px rgba(80,255,255,.04);
+
+}
+
+
+.cross-a{
+
+    transform:rotate(45deg);
+
+}
+
+
+.cross-b{
+
+    transform:rotate(-45deg);
+
+}
+
+
+/* ================================================================
+   NÚCLEO PRINCIPAL
+================================================================ */
+
+.core{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:10;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffffff 0%,
+            #caffff 3%,
+            #5fffff 9%,
+            rgba(30,245,245,.8) 17%,
+            rgba(0,190,190,.45) 30%,
+            rgba(0,90,90,.22) 50%,
+            transparent 72%
+        );
+
+    box-shadow:
+        0 0 12px #53ffff,
+        0 0 25px #53ffff,
+        0 0 55px rgba(50,255,255,.7),
+        0 0 100px rgba(50,255,255,.3),
+        0 0 160px rgba(50,255,255,.12);
+
+    animation:
+        corePulse 2s ease-in-out infinite;
+
+}
+
+
+.core::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-14px;
+
+    border:
+        1px solid rgba(100,255,255,.35);
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 15px rgba(80,255,255,.25),
+        inset 0 0 15px rgba(80,255,255,.12);
+
+    animation:
+        coreHalo 2.5s ease-in-out infinite;
+
+}
+
+
+.core::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-27px;
+
+    border:
+        1px solid rgba(80,255,255,.13);
+
+    border-radius:50%;
+
+    animation:
+        coreOuter 4s linear infinite;
+
+}
+
+
+.core-inner{
+
+    position:absolute;
+
+    width:50px;
+
+    height:50px;
+
+    border:
+        1px solid rgba(255,255,255,.9);
+
+    border-radius:50%;
+
+    box-shadow:
+        inset 0 0 20px #6fffff,
+        inset 0 0 35px rgba(80,255,255,.4),
+        0 0 15px #6fffff,
+        0 0 30px rgba(80,255,255,.4);
+
+    animation:
+        innerPulse 1.2s ease-in-out infinite;
+
+}
+
+
+.core-text{
+
+    z-index:20;
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    color:#f2ffff;
+
+    text-shadow:
+        0 0 8px #6fffff,
+        0 0 18px #6fffff;
+
+}
+
+
+/* ================================================================
+   MUTHR HABLANDO
+================================================================ */
+
+.core.talking{
+
+    animation:
+        speaking .32s ease-in-out infinite alternate;
+
+    box-shadow:
+        0 0 18px #ffffff,
+        0 0 35px #53ffff,
+        0 0 70px #53ffff,
+        0 0 120px rgba(50,255,255,.8),
+        0 0 190px rgba(50,255,255,.35);
+
+}
+
+
+.core.talking::before{
+
+    border-color:
+        rgba(150,255,255,.75);
+
+    box-shadow:
+        0 0 25px rgba(80,255,255,.7),
+        inset 0 0 25px rgba(80,255,255,.3);
+
+    animation:
+        talkingHalo .45s ease-in-out infinite alternate;
+
+}
+
+
+.core.talking::after{
+
+    border-color:
+        rgba(100,255,255,.3);
+
+    animation:
+        talkingOuter 1s linear infinite;
+
+}
+
+
+.core.talking .core-inner{
+
+    border-color:#ffffff;
+
+    box-shadow:
+        inset 0 0 25px #ffffff,
+        inset 0 0 45px #6fffff,
+        0 0 20px #ffffff,
+        0 0 40px #6fffff;
+
+    animation:
+        speakingInner .25s ease-in-out infinite alternate;
+
+}
+
+
+/* ================================================================
+   ORBS / PARTÍCULAS ORBITALES
+================================================================ */
+
+.orb{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:#bfffff;
+
+    box-shadow:
+        0 0 6px #74ffff,
+        0 0 14px #74ffff,
+        0 0 25px rgba(80,255,255,.6);
+
+    z-index:8;
+
+}
+
+
+.orb-one{
+
+    top:28%;
+
+    left:22%;
+
+    animation:
+        orbitOne 7s linear infinite;
+
+}
+
+
+.orb-two{
+
+    top:68%;
+
+    left:30%;
+
+    width:4px;
+
+    height:4px;
+
+    animation:
+        orbitTwo 5s linear infinite reverse;
+
+}
+
+
+.orb-three{
+
+    top:32%;
+
+    right:23%;
+
+    width:7px;
+
+    height:7px;
+
+    animation:
+        orbitThree 9s linear infinite;
+
+}
+
+
+.orb-four{
+
+    bottom:21%;
+
+    right:28%;
+
+    width:4px;
+
+    height:4px;
+
+    animation:
+        orbitFour 6s linear infinite reverse;
+
+}
+
+
+/* ================================================================
+   DATOS HOLOGRÁFICOS
+================================================================ */
+
+.holo-data{
+
+    position:absolute;
+
+    font-size:8px;
+
+    color:#57bbbb;
+
+    letter-spacing:1px;
+
+    text-shadow:
+        0 0 7px rgba(80,255,255,.25);
+
+    z-index:5;
+
+}
+
+
+.data-top{
+
+    top:10%;
+
+}
+
+
+.data-left{
+
+    left:5%;
+
+}
+
+
+.data-right{
+
+    right:5%;
+
+}
+
+
+.data-bottom{
+
+    bottom:10%;
+
+}
+
+
+/* ================================================================
+   SYSTEM READOUT
+================================================================ */
+
+.system-readout{
+
+    flex:
+        0 0
+        55px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:7px;
+
+    margin-top:8px;
+
+}
+
+
+.system-readout div{
+
+    border-top:
+        1px solid rgba(100,255,255,.2);
+
+    padding-top:7px;
+
+    position:relative;
+
+}
+
+
+.system-readout div::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-1px;
+
+    left:0;
+
+    width:20px;
+
+    height:1px;
+
+    background:#72ffff;
+
+    box-shadow:
+        0 0 7px #72ffff;
+
+}
+
+
+.system-readout span{
+
+    display:block;
+
+    font-size:7px;
+
+    color:#467373;
+
+    margin-bottom:3px;
+
+}
+
+
+.system-readout b{
+
+    font-size:9px;
+
+    color:#77dcdc;
+
+    text-shadow:
+        0 0 6px rgba(80,255,255,.25);
+
+}
+
+
+/* ================================================================
+   BOTÓN INICIAL
+================================================================ */
+
+.start-btn{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    z-index:200;
+
+    min-width:280px;
+
+    padding:18px 30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:14px;
+
+    border:
+        1px solid #6fffff;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(4,35,35,.98),
+            rgba(0,15,15,.98)
+        );
+
+    color:#7fffff;
+
+    font-family:inherit;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 0 25px rgba(60,255,255,.18),
+        inset 0 0 20px rgba(60,255,255,.08);
+
+    transition:.25s;
+
+}
+
+
+.start-btn:hover{
+
+    background:
+        rgba(20,80,80,.95);
+
+    box-shadow:
+        0 0 40px rgba(60,255,255,.3),
+        0 0 80px rgba(60,255,255,.1),
+        inset 0 0 25px rgba(60,255,255,.15);
+
+    transform:
+        translate(-50%,-50%)
+        scale(1.02);
+
+}
+
+
+.start-icon{
+
+    font-size:25px;
+
+    animation:
+        blink 1.2s infinite;
+
+    text-shadow:
+        0 0 12px #6fffff;
+
+}
+
+
+.start-btn small{
+
+    display:block;
+
+    margin-top:5px;
+
+    font-size:8px;
+
+    color:#518989;
+
+}
+
+
+.start-btn.hidden{
+
+    display:none;
+
+}
+
+
+/* ================================================================
+   PANEL DE MÚSICA
+================================================================ */
+
+.music-panel{
+
+    position:absolute;
+
+    z-index:500;
+
+    width:
+        min(650px,80vw);
+
+    max-height:
+        70vh;
+
+    left:50%;
+
+    top:50%;
+
+    transform:
+        translate(-50%,-50%)
+        scale(.92);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(3,25,25,.98),
+            rgba(0,10,10,.98)
+        );
+
+    border:
+        1px solid #67ffff;
+
+    box-shadow:
+        0 0 45px rgba(50,255,255,.25),
+        0 0 90px rgba(50,255,255,.08),
+        inset 0 0 30px rgba(50,255,255,.05);
+
+    transition:
+        .25s;
+
+}
+
+
+.music-panel.visible{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+    transform:
+        translate(-50%,-50%)
+        scale(1);
+
+}
+
+
+.music-panel-header{
+
+    height:50px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:
+        0 15px;
+
+    border-bottom:
+        1px solid rgba(100,255,255,.25);
+
+    color:#76ffff;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    text-shadow:
+        0 0 8px rgba(80,255,255,.4);
+
+}
+
+
+#close-list{
+
+    border:0;
+
+    background:none;
+
+    color:#72ffff;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+#close-list:hover{
+
+    color:#ffffff;
+
+    text-shadow:
+        0 0 10px #6fffff;
+
+    transform:
+        rotate(90deg);
+
+}
+
+
+.music-list{
+
+    max-height:
+        calc(70vh - 50px);
+
+    overflow-y:auto;
+
+    padding:10px;
+
+}
+
+
+.music-list::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+
+.music-list::-webkit-scrollbar-track{
+
+    background:#021010;
+
+}
+
+
+.music-list::-webkit-scrollbar-thumb{
+
+    background:#286d6d;
+
+    box-shadow:
+        0 0 8px rgba(80,255,255,.3);
+
+}
+
+
+.music-item{
+
+    width:100%;
+
+    min-height:47px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    border:
+        1px solid rgba(100,255,255,.1);
+
+    margin-bottom:6px;
+
+    padding:
+        8px 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,35,35,.7),
+            rgba(2,20,20,.7)
+        );
+
+    color:#72dddd;
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+    text-align:left;
+
+    transition:.15s;
+
+}
+
+
+.music-item:hover{
+
+    border-color:#6fffff;
+
+    background:
+        rgba(20,80,80,.65);
+
+    color:#fff;
+
+    box-shadow:
+        inset 0 0 15px rgba(80,255,255,.08),
+        0 0 10px rgba(80,255,255,.08);
+
+    transform:
+        translateX(3px);
+
+}
+
+
+.music-number{
+
+    color:#5dffff;
+
+    font-size:10px;
+
+    text-shadow:
+        0 0 7px rgba(80,255,255,.5);
+
+}
+
+
+.music-name{
+
+    flex:1;
+
+    font-size:10px;
+
+}
+
+
+.music-arrow{
+
+    color:#61ffb2;
+
+    text-shadow:
+        0 0 8px rgba(100,255,190,.5);
+
+}
+
+
+/* ================================================================
+   ANIMACIONES GENERALES
+================================================================ */
+
+@keyframes blink{
+
+    0%,
+    100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.35;
+    }
+
+}
+
+
+/* ================================================================
+   ROTACIÓN ANILLO 1
+================================================================ */
+
+@keyframes rotateOne{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+/* ================================================================
+   ROTACIÓN ANILLO 2
+================================================================ */
+
+@keyframes rotateTwo{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+/* ================================================================
+   ROTACIÓN ANILLO 3
+================================================================ */
+
+@keyframes rotateThree{
+
+    0%{
+        transform:
+            rotate(0deg)
+            scale(1);
+    }
+
+    50%{
+        transform:
+            rotate(180deg)
+            scale(.94);
+    }
+
+    100%{
+        transform:
+            rotate(360deg)
+            scale(1);
+    }
+
+}
+
+
+/* ================================================================
+   PULSO DEL ANILLO
+================================================================ */
+
+@keyframes pulseRing{
+
+    0%,
+    100%{
+
+        transform:scale(.94);
+
+        opacity:.45;
+
+    }
+
+    50%{
+
+        transform:scale(1.07);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* ================================================================
+   AURA HOLOGRÁFICA
+================================================================ */
+
+@keyframes hologramAura{
+
+    0%,
+    100%{
+
+        transform:scale(.9);
+
+        opacity:.6;
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+        opacity:1;
+
+    }
+
+}
+
+
+@keyframes slowPulse{
+
+    0%,
+    100%{
+
+        transform:scale(.95);
+
+        opacity:.45;
+
+    }
+
+    50%{
+
+        transform:scale(1.04);
+
+        opacity:.9;
+
+    }
+
+}
+
+
+/* ================================================================
+   NÚCLEO
+================================================================ */
+
+@keyframes corePulse{
+
+    0%,
+    100%{
+
+        transform:scale(.94);
+
+        opacity:.82;
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+        opacity:1;
+
+    }
+
+}
+
+
+@keyframes coreHalo{
+
+    0%,
+    100%{
+
+        transform:scale(.9);
+
+        opacity:.4;
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+        opacity:1;
+
+    }
+
+}
+
+
+@keyframes coreOuter{
+
+    from{
+
+        transform:
+            rotate(0deg)
+            scale(.95);
+
+        opacity:.3;
+
+    }
+
+    to{
+
+        transform:
+            rotate(360deg)
+            scale(1.05);
+
+        opacity:.7;
+
+    }
+
+}
+
+
+@keyframes innerPulse{
+
+    0%,
+    100%{
+
+        transform:scale(.9);
+
+        opacity:.65;
+
+    }
+
+    50%{
+
+        transform:scale(1.12);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* ================================================================
+   MUTHR HABLANDO
+================================================================ */
+
+@keyframes speaking{
+
+    from{
+
+        transform:
+            scale(.94);
+
+    }
+
+    to{
+
+        transform:
+            scale(1.18);
+
+    }
+
+}
+
+
+@keyframes talkingHalo{
+
+    from{
+
+        transform:scale(.85);
+
+        opacity:.45;
+
+    }
+
+    to{
+
+        transform:scale(1.18);
+
+        opacity:1;
+
+    }
+
+}
+
+
+@keyframes talkingOuter{
+
+    from{
+
+        transform:
+            rotate(0deg)
+            scale(.9);
+
+        opacity:.2;
+
+    }
+
+    to{
+
+        transform:
+            rotate(360deg)
+            scale(1.15);
+
+        opacity:.8;
+
+    }
+
+}
+
+
+@keyframes speakingInner{
+
+    from{
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        transform:scale(1.2);
+
+    }
+
+}
+
+
+/* ================================================================
+   ÓRBITAS DE PARTÍCULAS
+================================================================ */
+
+@keyframes orbitOne{
+
+    0%{
+
+        transform:
+            rotate(0deg)
+            translateX(70px)
+            rotate(0deg);
+
+    }
+
+    100%{
+
+        transform:
+            rotate(360deg)
+            translateX(70px)
+            rotate(-360deg);
+
+    }
+
+}
+
+
+@keyframes orbitTwo{
+
+    0%{
+
+        transform:
+            rotate(0deg)
+            translateX(105px);
+
+    }
+
+    100%{
+
+        transform:
+            rotate(360deg)
+            translateX(105px);
+
+    }
+
+}
+
+
+@keyframes orbitThree{
+
+    0%{
+
+        transform:
+            rotate(0deg)
+            translateX(85px);
+
+    }
+
+    100%{
+
+        transform:
+            rotate(360deg)
+            translateX(85px);
+
+    }
+
+}
+
+
+@keyframes orbitFour{
+
+    0%{
+
+        transform:
+            rotate(0deg)
+            translateX(120px);
+
+    }
+
+    100%{
+
+        transform:
+            rotate(360deg)
+            translateX(120px);
+
+    }
+
+}
+
+
+/* ================================================================
+   RESPONSIVE
+================================================================ */
+
+@media(
+    max-width:850px
+){
+
+    .main-content{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .right-panel{
+
+        display:none;
+
+    }
+
+
+    .top-header{
+
+        flex-basis:105px;
+
+    }
+
+
+    .status{
+
+        display:none;
+
+    }
+
+}
+
+
+@media(
+    max-height:700px
+){
+
+    .top-header{
+
+        flex-basis:85px;
+
+    }
+
+
+    .header-sub{
+
+        display:none;
+
+    }
+
+
+    .voice-monitor{
+
+        flex-basis:65px;
+
+    }
+
+
+    .music-controls{
+
+        flex-basis:55px;
+
+    }
+
+
+    .core{
+
+        width:100px;
+
+        height:100px;
+
+    }
+
+}
+
+
+@media(
+    max-width:500px
+){
+
+    .terminal-container{
+
+        padding:
+            10px;
+
+    }
+
+
+    .left-panel{
+
+        padding:10px;
+
+    }
+
+
+    .music-panel{
+
+        width:92vw;
+
+    }
+
+
+    .music-item{
+
+        min-height:52px;
+
+    }
+
+
+    .music-name{
+
+        font-size:9px;
+
+    }
+
+}
+
+
+/* ============================================================
+   MUTHR HOLOGRAM VIDEO
+============================================================ */
+
+.hologram-video-core {
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+
+}
+
+
+/* ============================================================
+   VIDEO
+============================================================ */
+
+.muthr-hologram-video {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    background: transparent;
+
+    pointer-events: none;
+
+    mix-blend-mode: screen;
+
+    opacity: 0.92;
+
+    filter:
+        brightness(1.15)
+        contrast(1.12)
+        saturate(0.85);
+
+    animation:
+        hologramFlicker 5s infinite;
+
+}
+
+
+/* ============================================================
+   SCANLINES
+============================================================ */
+
+.hologram-video-core::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0px,
+            transparent 3px,
+            rgba(255,255,255,0.035) 4px,
+            transparent 5px
+        );
+
+    animation:
+        hologramScan 4s linear infinite;
+
+}
+
+
+/* ============================================================
+   BRILLO
+============================================================ */
+
+.hologram-video-core::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255,255,255,0.08),
+            transparent 65%
+        );
+
+    mix-blend-mode: screen;
+
+    animation:
+        hologramPulse 2.8s ease-in-out infinite;
+
+}
+
+
+/* ============================================================
+   ESCANEO
+============================================================ */
+
+@keyframes hologramScan {
+
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+
+}
+
+
+/* ============================================================
+   PULSO
+============================================================ */
+
+@keyframes hologramPulse {
+
+    0% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.65;
+    }
+
+    100% {
+        opacity: 0.25;
+    }
+
+}
+
+
+/* ============================================================
+   INTERFERENCIA
+============================================================ */
+
+@keyframes hologramFlicker {
+
+    0% {
+        opacity: 0.92;
+        transform: translateX(0);
+    }
+
+    48% {
+        opacity: 0.92;
+        transform: translateX(0);
+    }
+
+    49% {
+        opacity: 0.75;
+        transform: translateX(-1px);
+    }
+
+    50% {
+        opacity: 0.95;
+        transform: translateX(1px);
+    }
+
+    51% {
+        opacity: 0.82;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0.92;
+        transform: translateX(0);
+    }
+
+}
