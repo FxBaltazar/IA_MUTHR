@@ -2642,5 +2642,25 @@ body{
         opacity: 0.92;
         transform: translateX(0);
     }
+   /* Este es tu contenedor (el div). Funciona como una ventana que oculta lo de afuera */
+.core-hologram-video-core {
+    width: 300px;           /* Ajusta el ancho que quieras para el holograma */
+    height: 400px;          /* Ajusta el alto que quieras para el holograma */
+    overflow: hidden;       /* ¡MUY IMPORTANTE! Recorta y esconde los bordes negros */
+    position: relative;     /* Permite posicionar el video de forma absoluta adentro */
+}
+
+/* Este es tu video. Lo agrandamos y movemos para enfocar solo a la chica */
+.muthr-hologram-video {
+    width: 280%;            /* Hace el video grande para sacar los bordes de la pantalla */
+    height: 180%;           
+    object-fit: cover;
+    position: absolute;
+    
+    /* Mueve estos valores si necesitas centrar más la cara de la chica */
+    top: -40%;              /* Sube o baja el video */
+    left: -90%;             /* Mueve el video a la izquierda o derecha */
+}
+
 
 }
